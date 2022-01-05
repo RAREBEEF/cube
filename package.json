@@ -1,0 +1,17 @@
+{
+  "name": "cube",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gsap": "^3.9.0",
+    "parcel-bundler": "^1.12.5"
+  }
+}

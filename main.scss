@@ -1,0 +1,70 @@
+$size: 30vmin;
+
+@mixin face($color, $tx: 0px, $ty: 0px, $tz: 0px, $rx: 0deg, $ry: 0deg) {
+  background-color: $color;
+  transform: translateX($tx) translateY($ty) translateZ($tz) rotateX($rx)
+    rotateY($ry);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: black;
+  height: 100vh;
+  overflow: hidden;
+  perspective: 1000px;
+}
+.cube {
+  cursor: move;
+  transform-style: preserve-3d;
+  position: absolute;
+  width: $size;
+  height: $size;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  // transform: translateX(--moveX);
+  // transform: translateY(--moveY);
+
+  // animation: rotate 7s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+  // @keyframes rotate {
+  //   0% {
+  //     transform: rotateX(0deg) rotateY(0deg);
+  //   }
+  //   100% {
+  //     transform: rotateX(360deg) rotateY(360deg);
+  //   }
+  // }
+
+  .face {
+    box-sizing: border-box;
+    border: 10px solid white;
+    width: $size;
+    height: $size;
+    position: absolute;
+    top: 0;
+    left: 0;
+    &.front {
+      @include face($color: rgba(255, 192, 203, 0.5), $tz: $size / 2);
+    }
+    &.back {
+      @include face($color: rgba(135, 206, 235, 0.5), $tz: -$size / 2);
+    }
+    &.top {
+      @include face($color: rgba(0, 128, 0, 0.5), $ty: -$size / 2, $rx: 90deg);
+    }
+    &.bottom {
+      @include face($color: rgba(255, 255, 0, 0.5), $ty: $size / 2, $rx: 90deg);
+    }
+    &.left {
+      @include face($color: rgba(0, 0, 255, 0.5), $tx: -$size / 2, $ry: 90deg);
+    }
+    &.right {
+      @include face($color: rgba(255, 0, 0, 0.5), $tx: $size / 2, $ry: 90deg);
+    }
+  }
+}
