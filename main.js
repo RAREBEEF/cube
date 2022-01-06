@@ -8,8 +8,8 @@ let clickY = 0;
 let moveX = 0;
 let moveY = 0;
 
-let lastX = 0;
-let lastY = 0;
+let lastX = -25;
+let lastY = 25;
 
 ////////////////////
 // 마우스 클릭 이벤트 //
@@ -26,14 +26,14 @@ cubeEl.addEventListener("mousedown", (e) => {
       const nowX = e.screenX;
       const nowY = e.screenY;
 
-      moveX = lastX + clickX - nowX;
-      moveY = lastY + clickY - nowY;
+      moveX = lastX + clickY - nowY;
+      moveY = lastY - clickX + nowX;
 
       console.log(`X 회전각 : ${moveX}
 Y 회전각 : ${moveY}`);
 
       gsap.to(cubeEl, 0, {
-        transform: `rotateY(${moveX}deg) rotateX(${moveY}deg)`,
+        transform: `rotateX(${moveX}deg) rotateY(${moveY}deg)`,
       });
     }
   });
@@ -68,14 +68,14 @@ cubeEl.addEventListener(
         const nowX = e.targetTouches[0].screenX;
         const nowY = e.targetTouches[0].screenY;
 
-        moveX = lastX + clickX - nowX;
-        moveY = lastY + clickY - nowY;
+        moveX = lastX + clickY - nowY;
+        moveY = lastY - clickX + nowX;
 
         console.log(`X 회전각 : ${moveX}
 Y 회전각 : ${moveY}`);
 
         gsap.to(cubeEl, 0, {
-          transform: `rotateY(${moveX}deg) rotateX(${moveY}deg)`,
+          transform: `rotateX(${moveX}deg) rotateY(${moveY}deg)`,
         });
       }
     });

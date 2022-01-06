@@ -15,9 +15,11 @@ body {
   cursor: move;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
+  -webkit-transform: rotateX(-25deg) rotateY(25deg);
+          transform: rotateX(-25deg) rotateY(25deg);
   position: absolute;
-  width: 30vmin;
-  height: 30vmin;
+  width: 40vmin;
+  height: 40vmin;
   left: 0;
   right: 0;
   top: 0;
@@ -28,46 +30,46 @@ body {
 .cube .face {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border: 10px solid white;
-  width: 30vmin;
-  height: 30vmin;
+  border: 5px solid black;
+  width: 40vmin;
+  height: 40vmin;
   position: absolute;
   top: 0;
   left: 0;
 }
 
 .cube .face.front {
-  background-color: rgba(255, 192, 203, 0.5);
-  -webkit-transform: translateX(0px) translateY(0px) translateZ(15vmin) rotateX(0deg) rotateY(0deg);
-          transform: translateX(0px) translateY(0px) translateZ(15vmin) rotateX(0deg) rotateY(0deg);
+  background-color: white;
+  -webkit-transform: translateX(0px) translateY(0px) translateZ(20vmin) rotateX(0deg) rotateY(0deg);
+          transform: translateX(0px) translateY(0px) translateZ(20vmin) rotateX(0deg) rotateY(0deg);
 }
 
 .cube .face.back {
-  background-color: rgba(135, 206, 235, 0.5);
-  -webkit-transform: translateX(0px) translateY(0px) translateZ(-15vmin) rotateX(0deg) rotateY(0deg);
-          transform: translateX(0px) translateY(0px) translateZ(-15vmin) rotateX(0deg) rotateY(0deg);
+  background-color: white;
+  -webkit-transform: translateX(0px) translateY(0px) translateZ(-20vmin) rotateX(0deg) rotateY(0deg);
+          transform: translateX(0px) translateY(0px) translateZ(-20vmin) rotateX(0deg) rotateY(0deg);
 }
 
 .cube .face.top {
-  background-color: rgba(0, 128, 0, 0.5);
-  -webkit-transform: translateX(0px) translateY(-15vmin) translateZ(0px) rotateX(90deg) rotateY(0deg);
-          transform: translateX(0px) translateY(-15vmin) translateZ(0px) rotateX(90deg) rotateY(0deg);
+  background-color: white;
+  -webkit-transform: translateX(0px) translateY(-20vmin) translateZ(0px) rotateX(90deg) rotateY(0deg);
+          transform: translateX(0px) translateY(-20vmin) translateZ(0px) rotateX(90deg) rotateY(0deg);
 }
 
 .cube .face.bottom {
-  background-color: rgba(255, 255, 0, 0.5);
-  -webkit-transform: translateX(0px) translateY(15vmin) translateZ(0px) rotateX(90deg) rotateY(0deg);
-          transform: translateX(0px) translateY(15vmin) translateZ(0px) rotateX(90deg) rotateY(0deg);
+  background-color: white;
+  -webkit-transform: translateX(0px) translateY(20vmin) translateZ(0px) rotateX(90deg) rotateY(0deg);
+          transform: translateX(0px) translateY(20vmin) translateZ(0px) rotateX(90deg) rotateY(0deg);
 }
 
 .cube .face.left {
-  background-color: rgba(0, 0, 255, 0.5);
-  -webkit-transform: translateX(-15vmin) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(90deg);
-          transform: translateX(-15vmin) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(90deg);
+  background-color: white;
+  -webkit-transform: translateX(-20vmin) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(90deg);
+          transform: translateX(-20vmin) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(90deg);
 }
 
 .cube .face.right {
-  background-color: rgba(255, 0, 0, 0.5);
-  -webkit-transform: translateX(15vmin) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(90deg);
-          transform: translateX(15vmin) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(90deg);
+  background-color: white;
+  -webkit-transform: translateX(20vmin) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(90deg);
+          transform: translateX(20vmin) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(90deg);
 }
