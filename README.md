@@ -1,5 +1,5 @@
 # **드래그로 회전 가능한 정육면체 만들기**
-<a href="https://codepen.io/RAREBEEF/pen/eYGKZKL">codepen.io 에서 확인해보기</a>
+<a href="https://codepen.io/RAREBEEF/pen/eYGKZKL" target="_blank">codepen.io 에서 확인해보기</a>
 <img src="cube.png" />
 JS와 CSS를 사용하여 기존에 만들던 것과는 다른 무언가를 만들어보고 싶었다. 3d로 무언가를 구현해보면 좋겠다는 생각이 들었는데, 처음엔 구체를 만들어볼까 했으나 표면이 꽉 채워진 구체는 현실적으로 구현하기가 어려울 것 같아서 무난하고 전체적으로 균형잡힌 정육면체를 제작해보기 했다.
 
